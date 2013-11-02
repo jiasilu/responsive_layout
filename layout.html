@@ -1,10 +1,42 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:600,400,700,300' rel='stylesheet' type='text/css' />
   <link href='styles.css' rel='stylesheet' type='text/css' />
 </head>
 <body>
+  <header>
+    <div class="left-side">
+      <a href="/">
+        <img alt="logo" src="assets/images/logo.png" class="logo"/>
+      </a>
+    </div>
+    <div class="right-side">
+      <nav>
+        <a href="/">name</a>
+        <a href="/">email</a>
+        <a href="/">phone</a>
+        <a href="/">username</a>
+        <a href="/">address</a>
+        <a href="/">court</a>
+      </nav>
+      <div class="search">
+          <form id="search" action="/search" method="get" >
+            <input name="q" class="textbox" placeholder="Enter a email address..." type="text" maxlength="80" />
+            <div class="mag-icon"><span></span></div>
+          </form>
+      </div>
+      <div class="account">
+        <div class="dropdown">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+        <div class="arrow"/>
+    </div>
+  </header>
 
 </body>
 </html>
