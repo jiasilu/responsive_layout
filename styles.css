@@ -40,25 +40,38 @@
 .checkmark_icon:before              { content:'\e015'; }
 
 /* Default wide-screen styles */
+
+/* ------------------------General set----------------------- */
+
 body {
   font-family:'Open Sans', Helvetica, Arial, sans-serif;
   font-size: 14px;
-  background-color: #f8f8f8;
+  color: #40464d;
+  background-color: #f7f7f7;
 }
 
 .wrapper {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  right: 10px;
+  bottom: 0;
   max-width: 1300px;
   margin: 0 auto;
 }
 
 input {
+  padding: 0;
   outline-width: 0;
 }
 
 a {
-  color: #c2c7cc;
   cursor: pointer;
   text-decoration: none;
+}
+
+a, .copyright {
+  color: #c2c7cc;
 }
 
 ul {
@@ -67,6 +80,39 @@ ul {
   display: inline;
 }
 
+/* ------------------------icon----------------------- */
+
+.icon {
+  position: absolute;
+  top: 11.5px;
+  cursor: pointer;
+}
+
+/* ------------------------box model----------------------- */
+
+.box {
+  border: 1px solid #c2c7cc;
+  -moz-border-radius: 20.5px;
+  border-radius: 20.5px;
+}
+
+/* ------------------------account text color----------------------- */
+
+.text span, .dropdown a {
+  color: #3c93ea;
+}
+
+/* ------------------------content table header----------------------- */
+
+.table_header {
+  line-height: 37px;
+  position: relative;
+  background-color: #4282c4;
+  color: white;
+}
+
+/* ------------------------header----------------------- */
+
 header {
   position: absolute;
   height: 82px;
@@ -74,7 +120,7 @@ header {
   left: 0px;
   z-index: 1;
   width: 100%;
-  min-width: 100%;
+  //min-width: 100%;
 }
 
 header .left_side {
@@ -83,18 +129,18 @@ header .left_side {
   float: left;
 }
 
-header .left_side a {
+header .logo {
   position: absolute;
-  line-height: 35px;
+  //line-height: 35px;
   text-indent: -9999px;
-  float: left;
-  display: block;
-  font-size: 23px;
-  color: #22a2da;
+  //float: left;
+  //display: block;
+  //font-size: 23px;
+  color: #4282c4;
   width: 186px;
   height: 30px;
   left: 20px;
-  bottom: 0px;
+  bottom: 4px;
   background: url("assets/images/logo.png") 0 0 no-repeat;
 }
 
@@ -103,19 +149,14 @@ header .right_side {
   float: right;
 }
 
-header nav {
-  padding: 16px 0 12px 6px;
-  text-transform: uppercase;
-  font-size: 10px;
+header .right_side .icon {
+  color: #a1aab3
 }
 
-header nav a {
-  color: #c2c7cc;
-  padding-left: 14px;
-}
-
-header nav a:hover {
-  color: black;
+header .right_side .box {
+  width: 100%;
+  height: 37px;
+  padding-left: 19px;
 }
 
 header .search {
@@ -123,52 +164,48 @@ header .search {
   float: left;
 }
 
+header .search nav {
+  padding: 16px 0 12px 6px;
+  text-transform: uppercase;
+  font-size: 10px;
+}
+
+header .search nav a {
+  padding-left: 14px;
+}
+
+header .search nav a:hover {
+  color: #40464d;
+}
+
 header .search form {
   position: relative;
 }
 
-header .box {
-  width: 100%;
-  height: 37px;
-  padding: 0 0 0 19px;
-  border: 1px solid #c2c7cc;
-  -moz-border-radius: 20.5px;
-  border-radius: 20.5px;
-}
-
 header .search .icon {
-  position: absolute;
-  line-height: 37px;
-  top: 0;
-  bottom: 0;
   right: 0;
-  cursor: pointer;
 }
 
-header .account {
+header .right_side .account {
   position: absolute;
   bottom: 1px;
   right: 0;
   width: 128px;
 }
 
-header .account .menu {
-  height: 37px;
+header .account {
+  background-color: #fafafa;
 }
 
-header .account .menu .icon {
-  cursor: pointer;
-  padding:  12px 15px 11px 12px;
-  display: inline-block;
+header .account .icon {
+  right: 20px;
 }
 
-header .account .menu .menu_icon {
+header .account .menu_icon {
   display: none;
 }
 
-
-header .account .menu .text {
-  color: #4282c4;
+header .account .text {
   padding: 9px 17px 9px 5px;
   display: inline-block;
   border-right: 1px solid #c2c7cc;
@@ -183,37 +220,16 @@ header .account .dropdown {
   top: 46px;
   right: 0;
   width: 162px;
-  color: #4282c4;
-  border: 1px solid #c2c7cc;
-  -moz-border-radius: 20.5px;
-  border-radius: 20.5px;
+  height: auto;
 }
 
 header .account .dropdown a {
-  color: #4282c4;
   padding: 10px 0;
   display: block;
 }
 
-/* wrapper */
+/* ------------------------content----------------------- */
 
-.wrapper {
-  height: 100%;
-  min-height: 100%;
-  position: absolute;
-  top: 0;
-  left: 10px;
-  right: 10px;
-  bottom: 0;
-}
-
-.wrapper .table_list {
-  height: 100%;
-  width: 26%;
-  float: left;
-}
-
-/* content */
 .content {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -223,32 +239,8 @@ header .account .dropdown a {
   padding: 98px 0px 23px 0;
 }
 
-/* table header */
-.wrapper .table_header {
-  height: 37px;
-  line-height: 37px;
-  position: relative;
-  border: 1px solid #4282c4;
-  background-color: #4282c4;
-  color: white;
-}
-
-.wrapper .table_header .icon {
-  line-height: 37px;
-  display: inline;
-  margin-left: 20px;
-}
-
-.wrapper .table_header .table_header_title {
-  height: 37px;
-  line-height: 37px;
-  display: inline;
-  margin-left: 10px;
-}
-
-/* table content */
-
-.wrapper .table_list, .table_results {
+.content .table_list, .table_results {
+  height: 100%;
   background-color: white;
   border: 1px solid #a1aab3;
   -webkit-border-radius: 4px;
@@ -256,19 +248,34 @@ header .account .dropdown a {
   border-radius: 4px;
 }
 
-.wrapper .table_content .inner_content {
+.content .table_header .icon {
+  left: 20px;
+}
+
+.content .table_header .table_header_title {
+  display: inline;
+  margin-left: 45px;
+}
+
+.content .table_content .inner_content {
   margin: 20px;
 }
 
-.wrapper .table_results {
-  height: 100%;
+
+.content .table_list {
+  width: 26%;
+  float: left;
+}
+
+.content .table_results {
   width: 73%;
   float: right;
 }
 
+/* ------------------------footer----------------------- */
+
 footer {
   font-size: 10px;
-  color: #c2c7cc;
   width: 100%;
   height: 22px;
   line-height: 22px;
@@ -281,7 +288,6 @@ footer {
 }
 
 footer .copyright {
-  display: inline;
   float: left;
 }
 
@@ -300,23 +306,25 @@ footer li a:hover {
   color: black;
 }
 
-@media all and (max-width: 1000px) {
-  header .left_side .logo {
+/* Screen size between 800px and 1000px styles */
+
+@media all and (min-width: 800px) and (max-width: 1000px) {
+  header .logo {
     left: 0px;
   }
+
   header .search {
-    width: 60%;
+    width: 69%;
     float: right;
-    padding-right: 200px;
+    padding-right: 31%;
   }
 
-  .table_list {
+  .content .table_list {
     display: none;
   }
 
-  .wrapper .table_results {
+  .content .table_results {
     width: 100%;
-    clear: both;
   }
 
   footer .footer_links {
@@ -324,25 +332,29 @@ footer li a:hover {
   }
 }
 
+/* Screen size smaller than 800px styles */
+
 @media all and (max-width: 800px) {
   .wrapper {
     left: 0;
     right: 0;
+    background-color: white;
   }
 
-  .dropdown.top .text {
-    padding-left: 15px;
-    line-height: 40px;
-    display: block;
-    color: #4282c4;
+  .content .table_list {
+    display: none;
   }
 
-  .dropdown.top a {
+  .content .table_results {
+    width: 100%;
+    border: none;
+  }
+
+  .dropdown.top a, .dropdown.top .text {
     padding-left: 15px;
     line-height: 40px;
     display: block;
     border-top: 1px solid #c2c7cc;
-    color: #4282c4;
   }
 
   header {
@@ -353,59 +365,57 @@ footer li a:hover {
 
   header .left_side {
     width: auto;
-    min-width: 104px;
-    display: inline;
   }
 
   header .left_side .logo {
     margin: 15px;
     width: 91px;
     height: 23px;
-    left: 0px;
+    left: 0;
+    bottom: 0;
     background: url("assets/images/logo_short.png") -50px 0 no-repeat;
   }
 
   header .right_side {
-    height: 100%;
-    display: inline;
+    width: 82%;
   }
 
   header .search {
     margin: 9px 0;
     width: 85%;
-    padding-right: 75px;
+    padding-right: 13%;
   }
 
   header .search nav {
     display: none;
   }
 
-  header .search input {
+  header .search .box {
     height: 32px;
   }
 
-  header .search .icon {
-    line-height: 32px;
+  header .search .search_icon {
+    top: 10px;
   }
 
-  header .account {
+  header .right_side .account {
     border: none;
-    padding-left: 13px;
+    background-color: transparent;
+    padding: 0px;
+    right: 2%;
     height: 34px;
     bottom: 9px;
-    width: auto;
+    width: 5%;
   }
 
   header .account .menu .text {
     display: none;
   }
 
-  header .account .menu {
-    height: 34px;
-  }
-
   header .account .menu .icon {
-    padding: 7px 10px;
+    right: 0;
+    top: 0;
+    padding: 7px 8px;
     font-size: 20px;
   }
 
@@ -419,10 +429,6 @@ footer li a:hover {
 
   .content {
     padding: 0;
-  }
-
-  .content .table_results {
-    border: none;
   }
 
   .content .table_results .table_header {

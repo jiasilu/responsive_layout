@@ -10,7 +10,7 @@
     if(dropdown.hasClass("top")) {
       dropdown.toggle("slow");
     } else {
-      dropdown.addClass("top").insertBefore("header");
+      dropdown.removeClass("box").addClass("top").insertBefore("header");
       dropdown.prepend($(".account .text"));
       dropdown.hide();
       dropdown.toggle("slow");
