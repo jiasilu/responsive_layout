@@ -7,36 +7,89 @@
   <link href='styles.css' rel='stylesheet' type='text/css' />
 </head>
 <body>
-  <header>
-    <div class="left-side">
-      <a href="/">
-        <img alt="logo" src="assets/images/logo.png" class="logo"/>
-      </a>
-    </div>
-    <div class="right-side">
-      <nav>
-        <a href="/">name</a>
-        <a href="/">email</a>
-        <a href="/">phone</a>
-        <a href="/">username</a>
-        <a href="/">address</a>
-        <a href="/">court</a>
-      </nav>
-      <div class="search">
-          <form id="search" action="/search" method="get" >
-            <input name="q" class="textbox" placeholder="Enter a email address..." type="text" maxlength="80" />
-            <div class="mag-icon"><span></span></div>
-          </form>
+  <div class="wrapper">
+    <header>
+      <div class="left_side">
+        <a href="/">
+          <img alt="logo" src="assets/images/logo.png" class="logo"/>
+        </a>
       </div>
-      <div class="account">
-        <div class="dropdown">
-          <a href="#">Link 1</a>
-          <a href="#">Link 2</a>
-          <a href="#">Link 3</a>
+      <div class="right_side">
+        <div class="search">
+          <nav>
+            <a href="#">name</a>
+            <a href="#">email</a>
+            <a href="#">phone</a>
+            <a href="#">username</a>
+            <a href="#">address</a>
+            <a href="#">court</a>
+          </nav>
+          <form id="search" action="/search" method="get" >
+            <input name="q" class="box" placeholder="Enter a email address..." type="text" maxlength="80" />
+            <div class="icon"><span class="search_icon"/></div>
+          </form>
         </div>
-        <div class="arrow"/>
+        <div class="account box">
+          <div class="menu">
+            <div class="text">
+              <span>Account</span>
+            </div>
+            <div class="icon">
+              <span class="down_arrow_icon"></span>
+            </div>
+          </div>
+          <div class="dropdown">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="content">
+      <div class="table_list">
+        <div class="table_header">
+          <div class="icon toc_icon">
+          </div>
+          <div class="table_header_title">
+            Table of Contents
+          </div>
+        </div>
+        <div class="table_content">
+          &nbsp;
+        </div>
+      </div>
+      <div class="table_results">
+        <div class="table_header">
+          <div class="icon email_icon"></div>
+          <div class="table_header_title">
+            Results
+          </div>
+        </div>
+        <div class="table_content">
+          <div class="inner_content">
+            Panel Contents
+          </div>
+        </div>
+      </div>
     </div>
-  </header>
-
+    <footer>
+      <div class="copyright">
+        © 2013 Spokeo People Search
+      </div>
+      <ul class="footer_links">
+        <li><a href="#" >Mobile</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Terms</a></li>
+        <li><a href="#">Directory</a></li>
+        <li><a href="#">Affiliates</a></li>
+        <li><a href="#">Community</a></li>
+        <li><a href="#">Contact</a></li>
+        </ul>
+    </footer>
+  </div>
 </body>
 </html>
