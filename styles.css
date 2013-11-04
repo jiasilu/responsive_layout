@@ -436,6 +436,7 @@ footer li a:hover {
 
   .content {
     padding: 0;
+    height: auto;
   }
 
   .content .table_results .table_header {
