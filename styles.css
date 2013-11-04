@@ -115,27 +115,22 @@ ul {
 
 header {
   position: absolute;
-  height: 82px;
+  height: 73px;
   top: 0px;
   left: 0px;
   z-index: 1;
   width: 100%;
-  //min-width: 100%;
 }
 
 header .left_side {
-  width: 26%;
+  width: 338px;
   height: 100%;
   float: left;
 }
 
 header .logo {
   position: absolute;
-  //line-height: 35px;
   text-indent: -9999px;
-  //float: left;
-  //display: block;
-  //font-size: 23px;
   color: #4282c4;
   width: 186px;
   height: 30px;
@@ -145,17 +140,16 @@ header .logo {
 }
 
 header .right_side {
-  width: 73%;
-  float: right;
+  margin-left: 348px;
 }
 
 header .right_side .icon {
-  color: #a1aab3
+  color: #a1aab3;
 }
 
 header .right_side .box {
   width: 100%;
-  height: 37px;
+  height: 35px;
   padding-left: 19px;
 }
 
@@ -165,7 +159,7 @@ header .search {
 }
 
 header .search nav {
-  padding: 16px 0 12px 6px;
+  padding: 14px 0 8px 5px;
   text-transform: uppercase;
   font-size: 10px;
 }
@@ -174,7 +168,7 @@ header .search nav a {
   padding-left: 14px;
 }
 
-header .search nav a:hover {
+header .search nav a:hover, header .search nav a.active {
   color: #40464d;
 }
 
@@ -206,7 +200,7 @@ header .account .menu_icon {
 }
 
 header .account .text {
-  padding: 9px 17px 9px 5px;
+  padding: 8px 17px 8px 5px;
   display: inline-block;
   border-right: 1px solid #c2c7cc;
 }
@@ -263,13 +257,12 @@ header .account .dropdown a {
 
 
 .content .table_list {
-  width: 26%;
+  width: 338px;
   float: left;
 }
 
 .content .table_results {
-  width: 73%;
-  float: right;
+  margin-left: 348px;
 }
 
 /* ------------------------footer----------------------- */
@@ -319,11 +312,23 @@ footer li a:hover {
     padding-right: 31%;
   }
 
+  header .left_side {
+    width: 26%;
+    height: 100%;
+    float: left;
+  }
+
+  header .right_side {
+    margin-left: 0;
+    width: 73%;
+    float: right;
+  }
   .content .table_list {
     display: none;
   }
 
   .content .table_results {
+    margin-left: 0;
     width: 100%;
   }
 
@@ -346,6 +351,7 @@ footer li a:hover {
   }
 
   .content .table_results {
+    margin-left: 0;
     width: 100%;
     border: none;
   }
@@ -377,13 +383,14 @@ footer li a:hover {
   }
 
   header .right_side {
-    width: 82%;
+    margin-left: 133px;
+    margin-right: 90px;
   }
 
   header .search {
+    width: auto;
+    float: none;
     margin: 9px 0;
-    width: 85%;
-    padding-right: 13%;
   }
 
   header .search nav {

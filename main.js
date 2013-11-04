@@ -1,5 +1,12 @@
 (function() {
   var dropdown = $(".dropdown");
+  var selector_array = $(".search a")
+  selector_array.on("click", function(event) {
+    event.preventDefault();
+    selector_array.removeClass("active");
+    $(event.target).addClass("active");
+  });
+
   $(".down_arrow_icon").on("click", function(event) {
     event.preventDefault();
     dropdown.toggle("slow");
