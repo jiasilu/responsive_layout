@@ -84,7 +84,7 @@ ul {
 
 .icon {
   position: absolute;
-  top: 11.5px;
+  top: 10.5px;
   cursor: pointer;
 }
 
@@ -106,13 +106,14 @@ ul {
 /* ------------------------content table header----------------------- */
 
 .table_header {
-  line-height: 37px;
+  line-height: 35px;
   position: relative;
   background-color: #4282c4;
   color: white;
-  -webkit-border-radius: 5px 5px 0 0;
-  -moz-border-radius: 5px 5px 0 0;
-  border-radius: 5px 5px 0 0;
+  border: 1px solid #2e65a7;
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
 }
 
 /* ------------------------header----------------------- */
@@ -240,11 +241,6 @@ header .account .dropdown a {
 .content .table_list, .table_results {
   height: 100%;
   background-color: white;
-  border: 1px solid #a1aab3;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  border-top: 0px;
 }
 
 .content .table_header .icon {
@@ -256,8 +252,20 @@ header .account .dropdown a {
   margin-left: 45px;
 }
 
+.content .table_content {
+  position: absolute;
+  top: 125px;
+  bottom: 22px;
+  width: 336px;
+  border: 1px solid #c2c7cc;
+  border-top: 0;
+  -webkit-border-radius: 0 0 4px 4px;
+  -moz-border-radius: 0 0 4px 4px;
+  border-radius: 0 0 4px 4px;
+}
+
 .content .table_content .inner_content {
-  margin: 20px;
+  padding: 20px;
 }
 
 
@@ -268,6 +276,12 @@ header .account .dropdown a {
 
 .content .table_results {
   margin-left: 350px;
+}
+
+.content .table_results .table_content {
+  width: auto;
+  right: 0;
+  left: 350px;
 }
 
 /* ------------------------footer----------------------- */
@@ -286,6 +300,7 @@ footer {
 }
 
 footer .copyright {
+  margin-left: 14px;
   float: left;
 }
 
@@ -334,11 +349,24 @@ footer li a:hover {
 
   .content .table_results {
     margin-left: 0;
-    width: 100%;
+  }
+
+  .content .table_results .table_content {
+    position: absolute;
+    top: 125px;
+    bottom: 22px;
+    right: 0px;
+    left: 0px;
+    border: 1px solid #a1aab3;
+    border-top: none;
   }
 
   .content .table_content .inner_content {
-    margin: 20px 15px;
+    padding: 20px 15px;
+  }
+
+  footer .copyright {
+    margin-left: 10px;
   }
 
   footer .footer_links {
@@ -449,15 +477,23 @@ footer li a:hover {
 
   .content {
     padding: 0;
-    height: auto;
   }
 
   .content .table_results .table_header {
     display: none;
   }
 
+  .content .table_results .table_content {
+    width: auto;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    border: none;
+  }
+
   .content .table_content .inner_content {
-    margin: 20px 15px;
+    padding: 20px 15px;
   }
 
   footer {
