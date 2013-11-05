@@ -92,6 +92,7 @@ ul {
 
 .box {
   border: 1px solid #c2c7cc;
+  -webkit-border-radius: 20.5px;
   -moz-border-radius: 20.5px;
   border-radius: 20.5px;
 }
@@ -109,6 +110,9 @@ ul {
   position: relative;
   background-color: #4282c4;
   color: white;
+  -webkit-border-radius: 5px 5px 0 0;
+  -moz-border-radius: 5px 5px 0 0;
+  border-radius: 5px 5px 0 0;
 }
 
 /* ------------------------header----------------------- */
@@ -140,7 +144,7 @@ header .logo {
 }
 
 header .right_side {
-  margin-left: 348px;
+  margin-left: 350px;
 }
 
 header .right_side .icon {
@@ -230,16 +234,17 @@ header .account .dropdown a {
   box-sizing: border-box;
   position: relative;
   height: 100%;
-  padding: 98px 0px 23px 0;
+  padding: 88px 0px 23px 0;
 }
 
 .content .table_list, .table_results {
   height: 100%;
   background-color: white;
   border: 1px solid #a1aab3;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border-top: 0px;
 }
 
 .content .table_header .icon {
@@ -262,7 +267,7 @@ header .account .dropdown a {
 }
 
 .content .table_results {
-  margin-left: 348px;
+  margin-left: 350px;
 }
 
 /* ------------------------footer----------------------- */
@@ -332,6 +337,10 @@ footer li a:hover {
     width: 100%;
   }
 
+  .content .table_content .inner_content {
+    margin: 20px 15px;
+  }
+
   footer .footer_links {
     right: 15px;
   }
@@ -358,15 +367,19 @@ footer li a:hover {
 
   .dropdown.top a, .dropdown.top .text {
     padding-left: 15px;
-    line-height: 40px;
+    line-height: 38px;
     display: block;
     border-top: 1px solid #c2c7cc;
   }
 
+  .dropdown.top a:last-child {
+    border-bottom: 1px solid #c2c7cc;
+  }
+
   header {
-    height: 52px;
+    height: 51px;
     position: relative;
-    border: 1px solid #c2c7cc;
+    border-bottom: 1px solid #c2c7cc;
   }
 
   header .left_side {
@@ -374,11 +387,11 @@ footer li a:hover {
   }
 
   header .left_side .logo {
-    margin: 15px;
+    margin-top: 15px;
     width: 91px;
     height: 23px;
-    left: 0;
-    bottom: 0;
+    left: 15px;
+    bottom: auto;
     background: url("assets/images/logo_short.png") -50px 0 no-repeat;
   }
 
@@ -390,7 +403,7 @@ footer li a:hover {
   header .search {
     width: auto;
     float: none;
-    margin: 9px 0;
+    padding: 10px 0;
   }
 
   header .search nav {
@@ -398,11 +411,11 @@ footer li a:hover {
   }
 
   header .search .box {
-    height: 32px;
+    height: 30px;
   }
 
   header .search .search_icon {
-    top: 10px;
+    top: 9px;
   }
 
   header .right_side .account {
@@ -441,6 +454,10 @@ footer li a:hover {
 
   .content .table_results .table_header {
     display: none;
+  }
+
+  .content .table_content .inner_content {
+    margin: 20px 15px;
   }
 
   footer {
